@@ -37,6 +37,7 @@
   --space-default: 1.6rem;
   --space-double: 3.2rem;
   --space-quad: 6.4rem;
+  --space-oct: 12.8rem;
 
   /* Typography */
   --font-family-sans: 'Roboto', sans-serif;
@@ -131,10 +132,18 @@ a {
   justify-content: center;
   color: var(--color-black);
   background-color: transparent;
-  /* border: none; */
+  border: none;
 }
 .button-icon:hover {
+  color: var(--color-charcoal-65);
   cursor: pointer;
+}
+.button-icon:hover .button-icon__icon {
+  fill: var(--color-charcoal-65);
+}
+
+.button-icon__icon {
+  fill: var(--color-black);
 }
 
 /* Header */
@@ -150,22 +159,28 @@ a {
   min-height: 1.12rem;
   background-color: var(--color-cement-074);
 }
-@media (max-width: 668.7px) {
+@media (max-width: 600.7px) {
   .header {
     padding-right: var(--space-double);
     padding-left: var(--space-double);
   }
 }
-@media (min-width: 668.8px) and (max-width: 728.7px) {
+@media (min-width: 600.8px) and (max-width: 728.7px) {
   .header {
     padding-right: var(--space-quad);
     padding-left: var(--space-quad);
   }
 }
-@media (min-width: 728.8px) {
+@media (min-width: 728.8px) and (max-width: 860.7px) {
   .header {
     padding-right: calc(var(--space-quad) + var(--space-double));
     padding-left: calc(var(--space-quad) + var(--space-double));
+  }
+}
+@media (min-width: 860.8px) {
+  .header {
+    padding-right: var(--space-oct);
+    padding-left: var(--space-oct);
   }
 }
 
@@ -200,19 +215,24 @@ a {
   background-color: var(--color-paper-081);
   box-shadow: 0 0.4rem 4rem 0 rgba(108, 108, 108, 0.8);
 }
-@media (max-width: 668.7px) {
+@media (max-width: 600.7px) {
   .menu--is-open {
     padding-left: var(--space-double);
   }
 }
-@media (min-width: 668.8px) and (max-width: 728.7px) {
+@media (min-width: 600.8px) and (max-width: 728.7px) {
   .menu--is-open {
     padding-left: var(--space-quad);
   }
 }
-@media (min-width: 728.8px) {
+@media (min-width: 728.8px) and (max-width: 860.7px) {
   .menu--is-open {
     padding-left: calc(var(--space-quad) + var(--space-double));
+  }
+}
+@media (min-width: 860.8px) {
+  .menu--is-open {
+    padding-left: var(--space-oct);
   }
 }
 
@@ -275,24 +295,31 @@ a {
   margin-bottom: var(--space-quad);
   padding-top: var(--space-double);
 }
-@media (max-width: 668.7px) {
+@media (max-width: 600.7px) {
   .main {
     padding-right: var(--space-double);
     padding-left: var(--space-double);
   }
 }
-@media (min-width: 668.8px) and (max-width: 728.7px){
+@media (min-width: 600.8px) and (max-width: 728.7px){
   .main {
     padding-right: var(--space-quad);
     padding-left: var(--space-quad);
   }
 }
-@media (min-width: 728.8px) {
+@media (min-width: 728.8px) and (max-width: 860.7px) {
   .main {
     padding-right: calc(var(--space-quad) + var(--space-double));
     padding-left: calc(var(--space-quad) + var(--space-double));
   }
 }
+@media (min-width: 860.8px) {
+  .main {
+    padding-right: var(--space-oct);
+    padding-left: var(--space-oct);
+  }
+}
+/* start desktop styles at min-width 1025 */
 
 .lead-title {
   margin-top: var(--space-quad);
