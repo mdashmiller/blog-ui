@@ -8,38 +8,37 @@
   <link rel="stylesheet" href="./app.css">
 </head>
 <body>
-  <!-- <a class="skip-nav" href="#mainContent">Skip to Main Content</a> -->
   <div class="content">
-    <!-- Header -->
-    <header class="header">
+    <!-- <a class="skip-nav" href="#mainContent">Skip to Main Content</a> -->
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <a class="t-brand mobile-brand" href="/">SCOUT</a>
       <button class="button">
         <span class="screen-reader-only">
           Open the navigation menu
         </span>
         <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M48 6H0v8h48V6ZM0 20h48v8H0v-8ZM0 34h48v8H0v-8Z"/></svg>
       </button>
-      <a class="t-brand brand" href="/">SCOUT</a>
-      <h1 class="screen-reader-only">A list of new headlines</h1>
-      <!-- Menu Nav -->
-      <nav class="menu">
-        <button class="button menu__close">
+      <!-- Mobile Nav -->
+      <nav class="mobile-menu">
+        <button class="button mobile-menu__close">
           <span class="screen-reader-only">
             Close the navigation menu
           </span>
           <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M29.354 23.98 44.677 8.657 39.021 3 23.738 18.282 8.698 3.021 3 8.636 18.081 23.94 3.021 39l5.656 5.657 15.02-15.02 14.781 15 5.698-5.616-14.822-15.04Z"/></svg>
         </button>
-        <ul class="menu__items">
-          <li class="menu__item">
-            <a class="t-link menu__item__link button" href="/">Home</a>
+        <ul class="mobile-menu__items">
+          <li class="mobile-menu__item">
+            <a class="t-link mobile-menu__item__link button" href="/">Home</a>
           </li>
-          <li class="menu__item">
-            <button class="t-link menu__item__button button">
+          <li class="mobile-menu__item">
+            <button class="t-link mobile-menu__item__button button">
               <span class="screen-reader-only">Open the </span>
               Search
               <span class="screen-reader-only"> panel</span>
             </button>
             <!-- Search Panel -->
-            <div class="menu__item__search">
+            <div class="mobile-menu__item__search">
               <form class="search" action="">
                 <label class="screen-reader-only" for="globalSearch">
                   Search the Scout website
@@ -60,11 +59,11 @@
               </form>
             </div>
           </li>
-          <li class="menu__item">
-            <a class="t-link menu__item__link button" href="/about">About</a>
+          <li class="mobile-menu__item">
+            <a class="t-link mobile-menu__item__link button" href="/about">About</a>
           </li>
         </ul>
-        <div class="share-section">
+        <div class="mobile-share-section">
           <span class="t-body-large share-section__cta">Share</span>
           <a class="button button--social" href="http://facebook.com">
             <span class="screen-reader-only"> on Facebook</span>
@@ -76,19 +75,92 @@
           </a>
         </div>
       </nav>
-      <button class="menu__overlay" aria-hidden="true">
+      <button class="mobile-menu__overlay" aria-hidden="true">
         <span class="screen-reader-only">Close the menu</span>
       </button>
+    </header>
+    <!-- Desktop Header -->
+    <header class="desktop-header desktop-header--is-shown">
+      <a class="t-brand desktop-brand" href="/">SCOUT</a>
+      <!-- Desktop Nav -->
+      <nav class="desktop-menu">
+        <ul class="desktop-menu__items">
+          <li class="desktop-menu__item">
+            <a class="t-link desktop-menu__item__link button" href="/">HOME</a>
+          </li>
+          <li class="desktop-menu__item">
+            <button class="t-link desktop-menu__item__button button">
+              <span class="screen-reader-only">Open the </span>
+              SEARCH
+              <span class="screen-reader-only"> panel</span>
+            </button>
+            <!-- Search Panel -->
+            <div class="desktop-menu__item__search">
+              <form class="search" action="">
+                <label class="screen-reader-only" for="globalSearch">
+                  Search the Scout website
+                </label>
+                <input class="t-body-large search__input" type="search" id="globalSearch">
+                <button class="button search__submit" type="submit">
+                  <span class="screen-reader-only">
+                    Search
+                  </span>
+                  <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.143 36.508A17.917 17.917 0 0 1 21 39c-9.941 0-18-8.059-18-18S11.059 3 21 3s18 8.059 18 18c0 3.7-1.116 7.139-3.03 9.998l10.343 9.5L40.9 46.39l-10.758-9.882ZM32 21c0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11 11 4.925 11 11Z"/></svg>
+                </button>
+                <button class="button search__close" type="button">
+                  <span class="screen-reader-only">
+                    Go back to the menu
+                  </span>
+                  <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M20.404 24.253 35.828 8.828l-5.656-5.656-21 21 .077.076-.079.079 20.478 20.5 5.66-5.654-14.904-14.92Z"/></svg>
+                </button>
+              </form>
+            </div>
+          </li>
+          <li class="desktop-menu__item">
+            <a class="t-link desktop-menu__item__link button" href="/about">ABOUT</a>
+          </li>
+        </ul>
+        <div class="desktop-share-section">
+          <span class="t-body-large share-section__cta">Share</span>
+          <a class="button button--social" href="http://facebook.com">
+            <span class="screen-reader-only"> on Facebook</span>
+            FBK
+          </a>
+          <a class="button button--social" href="http://twitter.com">
+            <span class="screen-reader-only"> on Twitter</span>
+            TWT
+          </a>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main class="main" id="mainContent">
+      <h1 class="screen-reader-only">A list of new headlines</h1>
       <h2 class="t-title-main lead-title">William Shatner</h2>
       <h3 class="t-subtitle sub-title">William Shatner has taken a small step, but it’s a giant leap to call him an astronaut | Brief letters</h3>
       <h2 class="t-title-main lead-title">Six Feet Under</h2>
       <h3 class="t-subtitle sub-title">Six Feet Under: 20 years on, the drama set in a family funeral home still feels ahead of its time</h3>
       <h2 class="t-title-main lead-title">Late-night TV roundup</h2>
       <h3 class="t-subtitle sub-title">Jimmy Kimmel: Shatner space trip was ‘like a North Korean news broadcast’</h3>
+      <h2 class="t-title-main lead-title">Film</h2>
+      <h3 class="t-subtitle sub-title">Tamzin Outhwaite: post your questions for the EastEnders, Bull and Masked Dancer star</h3>
+      <h2 class="t-title-main lead-title">Culture</h2>
+      <h3 class="t-subtitle sub-title">Dirty work: film, books, games and more to help with the daily grind</h3>
+      <h2 class="t-title-main lead-title">Elvis Presley</h2>
+      <h3 class="t-subtitle sub-title">Direct from Graceland: Victoria scores unprecedented Elvis Presley exhibition for 2022</h3>
+      <h2 class="t-title-main lead-title">Culture</h2>
+      <h3 class="t-subtitle sub-title">Little Amal is a reminder of how vital art is | Letters</h3>
+      <h2 class="t-title-main lead-title">TV streaming</h2>
+      <h3 class="t-subtitle sub-title">That Thing You Do!: Tom Hanks’ directorial debut is still an effervescent pop music romp</h3>
+      <h2 class="t-title-main lead-title">Culture</h2>
+      <h3 class="t-subtitle sub-title">On my radar: Thomasina McKenzie’s cultural highlights</h3>
+      <h2 class="t-title-main lead-title">David Hare</h2>
+      <h3 class="t-subtitle sub-title">David Hare furious at BBC after it rejects his Covid play, starring Ralph Fiennes</h3>
+      <h2 class="t-title-main lead-title">Design</h2>
+      <h3 class="t-subtitle sub-title">Simone Lia: The scary movie experience for the highly strung – cartoon</h3>
+      <h2 class="t-title-main lead-title">Culture</h2>
+      <h3 class="t-subtitle sub-title">Degrees of separation: what connects Richard Osman to LeBron and Zendaya?</h3>
     </main>
   </div>
 
