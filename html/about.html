@@ -10,36 +10,35 @@
 <body>
   <div class="content">
     <!-- <a class="skip-nav" href="#mainContent">Skip to Main Content</a> -->
-    <!-- Header -->
-    <header class="header">
-      <a class="t-brand brand-mobile" href="/">SCOUT</a>
-      <a class="t-brand brand-desktop brand-desktop--is-shown" href="/">SCOUT</a>
+    <!-- Mobile Header -->
+    <header class="mobile-header mobile-header--is-shown">
+      <a class="t-brand mobile-brand" href="/">SCOUT</a>
       <button class="button">
         <span class="screen-reader-only">
           Open the navigation menu
         </span>
         <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M48 6H0v8h48V6ZM0 20h48v8H0v-8ZM0 34h48v8H0v-8Z"/></svg>
       </button>
-      <!-- Menu Nav -->
-      <nav class="menu">
-        <button class="button menu__close">
+      <!-- Mobile Nav -->
+      <nav class="mobile-menu">
+        <button class="button mobile-menu__close">
           <span class="screen-reader-only">
             Close the navigation menu
           </span>
           <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M29.354 23.98 44.677 8.657 39.021 3 23.738 18.282 8.698 3.021 3 8.636 18.081 23.94 3.021 39l5.656 5.657 15.02-15.02 14.781 15 5.698-5.616-14.822-15.04Z"/></svg>
         </button>
-        <ul class="menu__items">
-          <li class="menu__item">
-            <a class="t-link menu__item__link button" href="/">Home</a>
+        <ul class="mobile-menu__items">
+          <li class="mobile-menu__item">
+            <a class="t-link mobile-menu__item__link button" href="/">Home</a>
           </li>
-          <li class="menu__item">
-            <button class="t-link menu__item__button button">
+          <li class="mobile-menu__item">
+            <button class="t-link mobile-menu__item__button button">
               <span class="screen-reader-only">Open the </span>
               Search
               <span class="screen-reader-only"> panel</span>
             </button>
             <!-- Search Panel -->
-            <div class="menu__item__search">
+            <div class="mobile-menu__item__search">
               <form class="search" action="">
                 <label class="screen-reader-only" for="globalSearch">
                   Search the Scout website
@@ -60,11 +59,11 @@
               </form>
             </div>
           </li>
-          <li class="menu__item">
-            <a class="t-link menu__item__link button" href="/about">About</a>
+          <li class="mobile-menu__item">
+            <a class="t-link mobile-menu__item__link button" href="/about">About</a>
           </li>
         </ul>
-        <div class="share-section">
+        <div class="mobile-share-section">
           <span class="t-body-large share-section__cta">Share</span>
           <a class="button button--social" href="http://facebook.com">
             <span class="screen-reader-only"> on Facebook</span>
@@ -76,14 +75,122 @@
           </a>
         </div>
       </nav>
-      <button class="menu__overlay" aria-hidden="true">
+      <button class="mobile-menu__overlay" aria-hidden="true">
         <span class="screen-reader-only">Close the menu</span>
       </button>
+    </header>
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+      <a class="t-brand desktop-brand" href="/">SCOUT</a>
+      <!-- Desktop Nav -->
+      <nav class="desktop-menu">
+        <ul class="desktop-menu__items">
+          <li class="desktop-menu__item">
+            <a class="t-link desktop-menu__item__link button" href="/">HOME</a>
+          </li>
+          <li class="desktop-menu__item">
+            <button class="t-link desktop-menu__item__button button">
+              <span class="screen-reader-only">Open the </span>
+              SEARCH
+              <span class="screen-reader-only"> panel</span>
+            </button>
+            <!-- Search Panel -->
+            <div class="desktop-menu__item__search">
+              <form class="search" action="">
+                <label class="screen-reader-only" for="globalSearch">
+                  Search the Scout website
+                </label>
+                <input class="t-body-large search__input" type="search" id="globalSearch">
+                <button class="button search__submit" type="submit">
+                  <span class="screen-reader-only">
+                    Search
+                  </span>
+                  <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.143 36.508A17.917 17.917 0 0 1 21 39c-9.941 0-18-8.059-18-18S11.059 3 21 3s18 8.059 18 18c0 3.7-1.116 7.139-3.03 9.998l10.343 9.5L40.9 46.39l-10.758-9.882ZM32 21c0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11 11 4.925 11 11Z"/></svg>
+                </button>
+                <button class="button search__close" type="button">
+                  <span class="screen-reader-only">
+                    Close the search form
+                  </span>
+                  <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M28.596 23.747 13.172 39.172l5.656 5.656 21-21-.077-.077.079-.078-20.478-20.5-5.66 5.654 14.904 14.92Z"/></svg>
+                </button>
+              </form>
+            </div>
+          </li>
+          <li class="desktop-menu__item">
+            <a class="t-link desktop-menu__item__link button" href="/about">ABOUT</a>
+          </li>
+        </ul>
+        <div class="desktop-share-section">
+          <span class="t-body-large share-section__cta">Share</span>
+          <a class="button button--social" href="http://facebook.com">
+            <span class="screen-reader-only"> on Facebook</span>
+            FBK
+          </a>
+          <a class="button button--social" href="http://twitter.com">
+            <span class="screen-reader-only"> on Twitter</span>
+            TWT
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Ultra-wide Header -->
+    <header class="ultra-wide-header">
+      <a class="t-brand ultra-wide-brand" href="/">SCOUT</a>
+      <!-- Ultra-wide Nav -->
+      <nav class="ultra-wide-menu">
+        <ul class="desktop-menu__items">
+          <li class="desktop-menu__item">
+            <a class="t-link desktop-menu__item__link button" href="/">HOME</a>
+          </li>
+          <li class="desktop-menu__item">
+            <button class="t-link desktop-menu__item__button button">
+              <span class="screen-reader-only">Open the </span>
+              SEARCH
+              <span class="screen-reader-only"> panel</span>
+            </button>
+            <!-- Search Panel -->
+            <div class="desktop-menu__item__search">
+              <form class="search" action="">
+                <label class="screen-reader-only" for="globalSearch">
+                  Search the Scout website
+                </label>
+                <input class="t-body-large search__input" type="search" id="globalSearch">
+                <button class="button search__submit" type="submit">
+                  <span class="screen-reader-only">
+                    Search
+                  </span>
+                  <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.143 36.508A17.917 17.917 0 0 1 21 39c-9.941 0-18-8.059-18-18S11.059 3 21 3s18 8.059 18 18c0 3.7-1.116 7.139-3.03 9.998l10.343 9.5L40.9 46.39l-10.758-9.882ZM32 21c0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11 11 4.925 11 11Z"/></svg>
+                </button>
+                <button class="button search__close" type="button">
+                  <span class="screen-reader-only">
+                    Go back to the menu
+                  </span>
+                  <svg class="button__icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M20.404 24.253 35.828 8.828l-5.656-5.656-21 21 .077.076-.079.079 20.478 20.5 5.66-5.654-14.904-14.92Z"/></svg>
+                </button>
+              </form>
+            </div>
+          </li>
+          <li class="desktop-menu__item">
+            <a class="t-link desktop-menu__item__link button" href="/about">ABOUT</a>
+          </li>
+        </ul>
+        <div class="desktop-share-section">
+          <span class="t-body-large share-section__cta">Share</span>
+          <a class="button button--social" href="http://facebook.com">
+            <span class="screen-reader-only"> on Facebook</span>
+            FBK
+          </a>
+          <a class="button button--social" href="http://twitter.com">
+            <span class="screen-reader-only"> on Twitter</span>
+            TWT
+          </a>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main class="main" id="mainContent">
-      <section class="about">
+      <article class="main__content-container">
         <h1 class="t-title-about about__title">
           <span class="about__title__lead">THIS </span>
           <span class="about__title__follow">Is how we do it</span>
@@ -91,7 +198,7 @@
           <p class="t-body about__content">Recent controversy aside, we can assume that any instance of a male can be construed as a soulless knife. Authors often misinterpret the clarinet as a smarmy geese, when in actuality it feels more like a weekly daniel.</p>
           <p class="t-body about__content">Before verses, polyesters were only licenses. Colonies are unswept cheetahs.</p>
           <p class="t-body about__content">The alarm is a squirrel.</p>
-      </section>
+      </article>
     </main>
   </div>
 
